@@ -11,54 +11,58 @@ function App() {
   const [flagsNames, setflagsNames] = useState([])
   const [flagPosition, setflagPosition] = useState(0) //80
   const [score, setScore] = useState(0)
+  const [toDisableMic, setToDisableMic] = useState(false)
+  const [toChooseLevel, setToChooseLevel] = useState(false)
 
   let copyFlags:any = [[], [], []]
   let nameFlagstochoose:any = []
   let IsNextFlag = false
 
-  //Get Voice
   const openLevel = (e:any) => {
-    //console.log( e.target.className )
     if( e.target.className === 'normal-level-title' || e.target.className === 'normal-level-description' ) {
       c('.game .game-choose-level').style.display = 'none'
       c('.game .option-normal').style.display = 'flex'
+      setToDisableMic( true )
+      setToChooseLevel( true )
     } else {
       c('.game .game-choose-level').style.display = 'none'
       c('.game .option-hard').style.display = 'flex'
-
+      setToChooseLevel( true )
       SpeechUser()
     }
   }
 
 
   //HARD LEVEL
+  //Get Voice
   const SpeechUser = () => {
-    
-    window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    const recognition = new window.SpeechRecognition();
+    if( toDisableMic === false && toChooseLevel === true ) {
+      window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const recognition = new window.SpeechRecognition();
 
-    recognition.lang = 'pt-BR'
+      recognition.lang = 'pt-BR'
 
-    recognition.addEventListener('result', (e:any) => {
+      recognition.addEventListener('result', (e:any) => {
 
-      c('.game .option-hard .section-options .name-flag').innerHTML = e.results[0][0].transcript
+        c('.game .option-hard .section-options .name-flag').innerHTML = e.results[0][0].transcript
 
-      console.log( c(`#flag${numFlags.toString()}hard`).className.toLowerCase() )
-      if( e.results[0][0].transcript.toLocaleLowerCase() === c(`#flag${numFlags.toString()}hard`).className.toLowerCase() ) {
-        //console.log( c(`#flag${numFlags.toString()}`).className.toLowerCase() )
+        console.log( c(`#flag${numFlags.toString()}hard`).className.toLowerCase() )
+        if( e.results[0][0].transcript.toLocaleLowerCase() === c(`#flag${numFlags.toString()}hard`).className.toLowerCase() ) {
 
-        c('.game .option-hard .section-options .name-flag').style.backgroundColor = 'green'
+          c('.game .option-hard .section-options .name-flag').style.backgroundColor = 'green'
 
-        newFlagHardLevel(e.results[0][0].transcript)
-      } else {
-        c('.game .option-hard .section-options .name-flag').style.backgroundColor = 'red'
-        newFlagHardLevel(e.results[0][0].transcript)
-      }
-    
-    })
+          newFlagHardLevel(e.results[0][0].transcript)
+        } else {
+          c('.game .option-hard .section-options .name-flag').style.backgroundColor = 'red'
+          newFlagHardLevel(e.results[0][0].transcript)
+        }
+      
+      })
 
-    recognition.start()
+      recognition.start()
+    }
   }
+
 
   const newFlagHardLevel = (e:any) => {
     setTimeout(() => {
@@ -84,6 +88,7 @@ function App() {
 
       IsNextFlag = false
     }, 3000)
+  
   }
 
 
