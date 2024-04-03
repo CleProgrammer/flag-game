@@ -67,8 +67,8 @@ export default function Flags() {
     let saveflags = {
         flags: [Brasil, Argentina, Uruguai, Paraguai, Chile, Bolívia, Equador, Venezuela, Suriname, Guiana, GuianaFrancesa, Peru, Colombia, EstadosUnidos, Mexico, Canada, CostaRica, Jamaica, Cuba,
                 Alemanha, NovaZelandia, Luxemburgo, Nigeria, Butao, Paquistao, India, Portugal, AfricaDoSul, Japao, China, Grecia, Italia, Espanha, Honduras, Nicaragua, Panama],
-        nameFlags: ['Brasil', 'Argentina', 'Uruguai', 'Paraguai', 'Chile', 'Bolívia', 'Equador', 'Venezuela', 'Suriname', 'Guiana', 'Guiana Francesa', 'Peru', 'Colombia', 'Estados Unidos', 'México', 'Canadá', 'Costa Rica', 'Jamaica', 'Cuba',
-                'Alemanha', 'Nova Zelândia', 'Luxemburgo', 'Nigéria', 'Butão', 'Paquistão', 'Índia', 'Portugal', 'África do Sul', 'Japão', 'China', 'Grécia', 'Itália', 'Espanha', 'Honduras', 'nicarágua', 'Panamá'],
+        nameFlags: ['Brasil', 'Argentina', 'Uruguai', 'Paraguai', 'Chile', 'Bolívia', 'Equador', 'Venezuela', 'Suriname', 'Guiana', 'Guiana Francesa', 'Peru', 'Colômbia', 'Estados Unidos', 'México', 'Canadá', 'Costa Rica', 'Jamaica', 'Cuba',
+                'Alemanha', 'Nova Zelândia', 'Luxemburgo', 'Nigéria', 'Butão', 'Paquistão', 'Índia', 'Portugal', 'África do Sul', 'Japão', 'China', 'Grécia', 'Itália', 'Espanha', 'Honduras', 'Nicarágua', 'Panamá'],
     }
     return saveflags
 }
