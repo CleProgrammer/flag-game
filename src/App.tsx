@@ -269,7 +269,7 @@ function App() {
     <div className='game'>
 
       <div className='game-choose-level'>
-        <div className='game-title'>QUAL É O PÁIS?</div>
+        <div className='game-title'>QUAL É O PAÍS?</div>
         <div className='normal-level' onClick={openLevel}>
           <div className='normal-level-title'>NORMAL</div>
           <div className='normal-level-description'>Você terá três opções para escolher.</div>

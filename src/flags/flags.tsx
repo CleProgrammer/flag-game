@@ -27,6 +27,8 @@ import Jamaica from '../images/jamaica.png'
 import Honduras from '../images/honduras.png'
 import Nicaragua from '../images/nicaragua.png'
 import Panama from '../images/panama.png'
+import Guatemala from '../images/guatemala.png'
+import Haiti from '../images/haiti.png'
 /*import AntiguaEBarbuda from '../images/antiguaebarbuda.png'
 import Bahamas from '../images/bahamas.jpg'
 import Barbados from '../images/barbados.png'
@@ -34,8 +36,6 @@ import Belize from '../images/belize.png'
 import Dominica from '../images/dominica.png'
 import ElSalvador from '../images/elsalvador.png'
 import Granada from '../images/granada.png'
-import Guatemala from '../images/guatemala.png'
-import Haiti from '../images/haiti.png'
 import RepublicaDominicana from '../images/republicadominicana.png'
 import SantaLucia from '../images/santalucia.png'
 import SaoCristovaoENeves from '../images/saocristovaoeneves.png'
@@ -66,9 +66,9 @@ import Espanha from '../images/espanha.png'
 export default function Flags() {
     let saveflags = {
         flags: [Brasil, Argentina, Uruguai, Paraguai, Chile, Bolívia, Equador, Venezuela, Suriname, Guiana, GuianaFrancesa, Peru, Colombia, EstadosUnidos, Mexico, Canada, CostaRica, Jamaica, Cuba,
-                Alemanha, NovaZelandia, Luxemburgo, Nigeria, Butao, Paquistao, India, Portugal, AfricaDoSul, Japao, China, Grecia, Italia, Espanha, Honduras, Nicaragua, Panama],
+                Alemanha, NovaZelandia, Luxemburgo, Nigeria, Butao, Paquistao, India, Portugal, AfricaDoSul, Japao, China, Grecia, Italia, Espanha, Honduras, Nicaragua, Panama, Guatemala, Haiti],
         nameFlags: ['Brasil', 'Argentina', 'Uruguai', 'Paraguai', 'Chile', 'Bolívia', 'Equador', 'Venezuela', 'Suriname', 'Guiana', 'Guiana Francesa', 'Peru', 'Colômbia', 'Estados Unidos', 'México', 'Canadá', 'Costa Rica', 'Jamaica', 'Cuba',
-                'Alemanha', 'Nova Zelândia', 'Luxemburgo', 'Nigéria', 'Butão', 'Paquistão', 'Índia', 'Portugal', 'África do Sul', 'Japão', 'China', 'Grécia', 'Itália', 'Espanha', 'Honduras', 'Nicarágua', 'Panamá'],
+                'Alemanha', 'Nova Zelândia', 'Luxemburgo', 'Nigéria', 'Butão', 'Paquistão', 'Índia', 'Portugal', 'África do Sul', 'Japão', 'China', 'Grécia', 'Itália', 'Espanha', 'Honduras', 'Nicarágua', 'Panamá', 'Guatemala', 'Haiti'],
     }
     return saveflags
 }
